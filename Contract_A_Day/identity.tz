@@ -1,0 +1,10 @@
+parameter string;
+return string;
+storage unit;
+code {};
+
+# The above stack starts with the following
+# (Pair string Unit), so the contract has to end with
+# a return value, and the storage.
+# The return type is string, while the storage type is unit
+# The type must be (pair string unit)
