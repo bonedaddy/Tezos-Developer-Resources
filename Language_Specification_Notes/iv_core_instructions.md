@@ -27,3 +27,14 @@ The followin notes are taken from section `IV - Core Instructions` of the michel
       where I / SA => SB
       and C / SB =>SC
   ```
+
+* `IF bt bf` - Condition branching
+
+``` Ocaml
+:: bool : 'A -> -B
+  iff bt :: [ 'A -> 'B ]
+      bt :: [ 'A -> 'B]
+
+> IF bt bf / True : S => bt / S
+> IF bt bf / False : S => bt / S
+```

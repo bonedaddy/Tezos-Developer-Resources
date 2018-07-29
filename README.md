@@ -10,6 +10,7 @@ Exploring Michelson, the programming language for Tezos. This repository will se
 ## Resources
 
 * [language specification - Table Of Contents](https://doc.tzalpha.net/whitedoc/michelson.html#table-of-contents)
+* [Ocaml and Michelson Resources](https://github.com/tezoscommunity/FAQ/wiki/OCaml-and-MIchelson-Resources)
 
 ## Variations
 
