@@ -9,4 +9,8 @@ Exploring Michelson, the programming language for Tezos. This repository will se
 
 ## Resources
 
-* [language specification](https://doc.tzalpha.net/whitedoc/michelson.html#ii-introduction-to-the-type-system-and-notations)
+* [language specification - Table Of Contents](https://doc.tzalpha.net/whitedoc/michelson.html#table-of-contents)
+
+## Variations
+
+* [Liquidity - High Level Language, Ocaml Syntax, Strict compilation with Michelson security restrictions](https://www.liquidity-lang.org/)
