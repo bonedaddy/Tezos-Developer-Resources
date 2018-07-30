@@ -9,6 +9,7 @@ If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVj
 * [contract a day](https://www.michelson-lang.com/contract-a-day.html#sec-1)
 * [Getting Started With Tezos: first steps](https://martin.pospech.cz/post/getting_started_with_tezos/)
 * [Optimizing Stack manipulation in Michelson](https://hackernoon.com/optimizing-stack-manipulation-in-michelson-31ba7ff11a3a)
+* [Getting started with Liquidity: coinflip](https://martin.pospech.cz/post/getting_started_with_liquidity/)
 
 ## Resources
 
