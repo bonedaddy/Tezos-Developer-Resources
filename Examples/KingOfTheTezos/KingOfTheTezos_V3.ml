@@ -48,6 +48,7 @@ let%entry main
     if throne_minus_tribute < storage.throne then
       Current.failwith "throne too small after paying tribute"
     else
+      let storage = storage.players <- Map.add king throne_minus_tribute storage.players in
       let old_throne = storage.throne in
       let old_king = storage.king in 
       (* Update current king key hash *)
