@@ -25,6 +25,10 @@ If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVj
 * [fi is a powerful, smart contract language for Tezos that compiles down to valid and verifiable Michelson code. fi is currently in early alpha stages, with the aim of release a complete alpha release soon](https://github.com/stephenandrews/fi)
 * [Juvix PoC, possibly no updates in future](https://github.com/cwgoes/juvix)
 
+## Tezos Dapps
+
+* [Luckytz, the first public Tezos dapp](https://luckytez.github.io/)
+
 ### Tools
 
 ### Golang
