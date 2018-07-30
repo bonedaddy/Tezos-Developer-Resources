@@ -8,7 +8,12 @@ If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVj
 
 ### Liquidity
 
+### Advancd Liquidity Examples
+
 * `KingOfTheTezos.ml` is a liquidity version of King Of The Ether
+
+### Basic Liquidity Examples
+
 * `hello_world.ml` is a basic hello world in liquidity
 * `string_set.ml` is a basic liquidity contract, allowing one to set a string value in storage
 * `string_set_with_cost.ml` allows you to set a string in storage if you pay 10tz
