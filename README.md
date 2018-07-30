@@ -12,6 +12,7 @@ If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVj
 
 ## Resources
 
+* [The Michelson Language](https://www.michelson-lang.com/)
 * [language specification - Table Of Contents](https://doc.tzalpha.net/whitedoc/michelson.html#table-of-contents)
 * [Ocaml and Michelson Resources](https://github.com/tezoscommunity/FAQ/wiki/OCaml-and-MIchelson-Resources)
 * [Developer Documentation](https://doc.tzalpha.net/index.html)
