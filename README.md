@@ -89,7 +89,7 @@ Parameter `tz1UtyxbBMeNQmqXErRCUxi1CuppZ1nybBpF`
   throne = 100tz;
   greetings_tribute = 0.1tz;
   passings_tribute = 1tz;
-  players = (Map [(tz1Yju7jmmsaUiG9qQLoYv35v5pHgnWoLWbt, 10tz)])
+  players = (Map [(tz1Yju7jmmsaUiG9qQLoYv35v5pHgnWoLWbt, 100tz)])
 }
 ```
 

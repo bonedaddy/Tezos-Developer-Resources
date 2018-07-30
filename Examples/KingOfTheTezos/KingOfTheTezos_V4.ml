@@ -64,15 +64,15 @@ let%entry main
     (* Calculate remaining bid after tribute *)
     let throne_bid_minus_tributes = (throne_bid - storage.greetings_tribute) - storage.passings_tribute in
     (* Check if they have enough to usurp after removing all tributes*)
-    if throne_bid_minus_tributes <= storage.throne then
+    if throne_bid_minus_tributes < storage.throne then
       Current.failwith "pitiful attempt to overthrow the throne. pay more"
     else
+      (*calculate war chest**)
+      let war_chest = storage.throne - storage.initial_throne in
       (* update initial throne *)
       let storage = storage.initial_throne <- throne_bid_minus_tributes in
       (* update players *)
-      let storage = storage.players <- Map.add king throne_bid_minus_tributes storage.players in
-      (* get throne difference *)
-      let war_chest = throne_bid_minus_tributes - storage.throne in
+      let storage = storage.players <- Map.add king throne_bid_minus_tributes storage.players in 
       (* create the creator refund *)
       let creator_refund_amount = storage.passings_tribute + storage.greetings_tribute in
       (* created a sendable address for creator *)
