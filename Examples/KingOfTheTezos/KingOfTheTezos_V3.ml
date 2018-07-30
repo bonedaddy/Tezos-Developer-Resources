@@ -37,6 +37,8 @@ let%entry main
   (* If they are the current king, update their throne, 
   otherwise attempt to overtake throne *)
   if king_address = storage.king_address then
+    let new_throne = storage.throne + throne_bid in
+    let storage = storage.players <- Map.add king new_throne storage.players in
     let storage = storage.throne <- storage.throne + throne_bid in
     ( ([] : operation list), storage)
   else
