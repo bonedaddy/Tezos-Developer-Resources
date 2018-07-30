@@ -16,7 +16,7 @@ If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVj
 
 ### Michelson
 
-* `hello_worldz.tz` - Not currently working
+* `hello_worldz.tz` - michelson version of the liquidity hello world contract
 
 ## Tutorials
 
