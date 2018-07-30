@@ -10,13 +10,13 @@ type storage = {
   king : key_hash;
   king_address : address;
   throne : tez;
-  fee : tez;
+  tribute : tez;
 }
 
 (* This is used to initialize our storage *)
-let%init storage (owner_key : key_hash) (fee_amount : tez)  = {
+let%init storage (owner_key : key_hash) (tribute_amount : tez)  = {
   owner = owner_key;
-  fee = fee_amount;
+  tribute = tribute_amount;
   king = owner_key;
   king_address = Current.source();
   throne = Current.amount();
@@ -40,9 +40,10 @@ let%entry main
     ( ([] : operation list), storage)
   else
     (* Calculate throne size after paying tribute *)
-    let throne_minus_fee = throne - storage.fee in
+    let throne_minus_tribute = throne - storage.tribute in
+    let tribute = throne - throne_minus_tribute in
     (* make sure they have a big enough throne, otherwise fail *)
-    if throne_minus_fee < storage.throne then
+    if throne_minus_tribute < storage.throne then
       Current.failwith "throne too small after paying tribute"
     else 
       (* Update current king key hash *)
@@ -50,9 +51,9 @@ let%entry main
       (* Update current king address *)
       let storage = storage.king_address <- king_address in
       (* Update throne size *)
-      let storage = storage.throne <- throne_minus_fee in
+      let storage = storage.throne <- throne_minus_tribute in
       (* Create sendable address from owner *)
       let owner = Account.default storage.owner in
       (* Send tribute to owner *)
-      let op = Contract.call owner storage.fee () in
+      let op = Contract.call owner tribute () in
       ( [op], storage)
