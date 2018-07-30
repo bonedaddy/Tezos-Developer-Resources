@@ -1,30 +1,31 @@
 [%%version 0.3]
 
-(* because every blockchain needs a ponzi scheme, WIP *)
-(* must be played from KT1 addresses as they are contract addresses *)
+(* KingOfTheTezos - Tezos version of King Of The Ether *)
+(* Dev fee is 0.1Tezos *)
 
 type storage = {
   owner : key_hash;
-  user : key_hash;
-  user_address : address;
-  identifier : string;
-  bid : tez;
+  king : key_hash;
+  king_address : address;
+  throne : tez;
   fee : tez;
 }
 
 let%entry main
-  (parameter : key_hash)
-  (storage : storage) = 
+    (parameter : key_hash)
+    (storage : storage) = 
   
   let amount = Current.amount() in
-  let user = parameter in
-  let user_address = Contract.address() in
-  if user_address = storage.user_address then
-    let storage = storage.bid <- storage.bid + amount in
+  let king = parameter in
+  let king_address = Current.source() in
+  if king_address = storage.king_address then
+    let storage = storage.throne <- storage.throne + amount in
     ( ([] : operation list), storage)
   else
-    let storage = storage.user <- user in
-    let storage = storage.user_address <- user_address in
-    let bid_minus_fee = storage.bid - storage.fee in 
-    let storage = storage.bid <- bid_minus_fee in
-    ( ([] : operation list), storage)
+    let storage = storage.king <- king in
+    let storage = storage.king_address <- king_address in
+    let bid_minus_fee = storage.throne - storage.fee in
+    let storage = storage.throne <- bid_minus_fee in
+    let owner = Account.default storage.owner in
+    let op = Contract.call owner storage.fee () in
+    ( [op], storage)
