@@ -5,14 +5,17 @@
 (* Version - 0.4 *)
 (*
   How does it work? In order to usurp the previous king, you must pay more than their throne is worth, while still paying tribute to the creator (Postables! :D).
-  You can increase the might of your throne after claiming it as much as you want. However you have the creators blessing, and can increase the might of your throne as much as you want, without paying additional tribute.
+  You can increase your throne's warchest after claiming it as much as you want now that you have the creators blessing. With the creators blessing you can increase your war chest as much as you want, without paying additional tribute.
 
-  Should you be usurped, you will receive your throne, minus a passing tribute fee. If you managed to increase the might of your throne enough before you are usurped, then you may very make off a richer being. But be warned, anyone can you usurp you before you have a chance to increase your might and you shall see no gains.
+  Should you be usurped, before you have had the chance to supply your warchest, you receive nothing, and swept aside along with the rest of the fools who tried to seek victory. If however you managed to supply your war chest, you will be given riches beyond your wildest imaginations.
 
-  TL;DR rules:
+  TL;DR non "rp" rules:
     1) Pay a higher tezos amount that the current throne. This must be greater than the current throne plus the greetings and passings tribute.
-    2) Top up your throne as much as you want without paying any tribute fees
-    3) When you get usurped, if there is any tezos left after removing the passings tribute, you make tezos!
+    2) Attempt to supply your war chest after claiming the throne.
+    3) If you manage to supply your warchest before you are usurped, you will be rewarded, equivalent to the war chest size.
+
+    *Initial throne refers to the amount required to usurp the previous king
+    *Warchest size is calculated by the difference of the current throne and your initial throne.
 *)
 
 type storage = {
