@@ -33,3 +33,7 @@ If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVj
 ### Golang Implementations
 
 * [Postables](https://github.com/postables/TGo)
+
+### Javascript Implementations
+
+* [ezts](https://github.com/stephenandrews/eztz)
