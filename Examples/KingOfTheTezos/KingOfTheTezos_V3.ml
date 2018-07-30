@@ -2,8 +2,7 @@
 
 (* KingOfTheTezos - Tezos version of King Of The Ether *)
 (* Author - Postables *)
-(* Version - 0.2 *)
-(* Must be played from kt1 addresses *)
+(* Version - 0.3 *)
 
 type storage = {
   owner : key_hash;
@@ -45,9 +44,10 @@ let%entry main
     let throne_minus_tribute = throne_bid - storage.tribute in
     let tribute = throne_bid - throne_minus_tribute in
     (* make sure they have a big enough throne, otherwise fail *)
-    if throne_minus_tribute < storage.throne then
+    if throne_minus_tribute <= storage.throne then
       Current.failwith "throne too small after paying tribute"
     else
+      (* Update players with the new king*)
       let storage = storage.players <- Map.add king throne_minus_tribute storage.players in
       let old_throne = storage.throne in
       let old_king = storage.king in 
