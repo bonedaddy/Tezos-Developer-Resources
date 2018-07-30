@@ -6,10 +6,16 @@ If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVj
 
 ## Examples
 
+### Liquidity
+
+* `hello_world.ml` is a basic hello world in liquidity
 * `string_set.ml` is a basic liquidity contract, allowing one to set a string value in storage
 * `string_set_with_cost.ml` allows you to set a string in storage if you pay 10tz
 * `multi_string_set.ml` allows you to set two strings in storage
 * `multi_string_set_with_cost.ml` allows you to set two strings in storage, and the value of the transaction if you pay 10tz or more
+
+### Michelson
+
 * `hello_worldz.tz` - Not currently working
 
 ## Tutorials
