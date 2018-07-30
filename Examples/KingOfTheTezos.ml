@@ -11,6 +11,16 @@ type storage = {
   fee : tez;
 }
 
+(* This is used to initialize our storage *)
+let%init storage (owner_key : key_hash) (fee_amount : tez)  = {
+  owner = owner_key;
+  fee = fee_amount;
+  king = owner_key;
+  king_address = Current.source();
+  throne = Current.amount();
+}
+
+(* This is where all user interaction occurs *)
 let%entry main
     (parameter : key_hash)
     (storage : storage) = 
