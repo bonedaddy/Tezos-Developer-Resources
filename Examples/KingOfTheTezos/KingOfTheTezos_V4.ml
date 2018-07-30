@@ -19,6 +19,7 @@ type storage = {
   creator : key_hash;
   king : key_hash;
   king_address : address;
+  initial_throne : tez;
   throne : tez;
   greetings_tribute : tez;
   passings_tribute :   tez;
@@ -35,6 +36,7 @@ let%init storage
   passings_tribute = passings_tribute_amount;
   king = creator_key;
   king_address = Current.source();
+  initial_throne = Current.amount();
   throne = Current.amount();
   players = Map.add creator_key (Current.amount()) (Map [tz1LRhs3uaaFAXfHJiC5fdEjbmF3MFxdGgUw, 0tz]);
 }
@@ -65,6 +67,10 @@ let%entry main
     if throne_bid_minus_tributes <= storage.throne then
       Current.failwith "pitiful attempt to overthrow the throne. pay more"
     else
+      (* update initial throne *)
+      let storage = storage.initial_throne <- throne_bid_minus_tributes in
+      (* update players *)
+      let storage = storage.players <- Map.add king throne_bid_minus_tributes storage.players in
       (* get throne difference *)
       let war_chest = throne_bid_minus_tributes - storage.throne in
       (* create the creator refund *)
