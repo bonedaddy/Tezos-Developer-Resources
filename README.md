@@ -34,13 +34,13 @@ If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVj
 * [Baking Information](https://medium.com/tezos/its-a-baker-s-life-for-me-c214971201e1)
 * [Fi Documentation](https://fi-code.gitbooks.io/documentation/content/)
 
-## Variations
+## Smart Contract Languages
 
 * [Liquidity - High Level Language, Ocaml Syntax, Strict compilation with Michelson security restrictions](https://www.liquidity-lang.org/)
 * [fi is a powerful, smart contract language for Tezos that compiles down to valid and verifiable Michelson code. fi is currently in early alpha stages, with the aim of release a complete alpha release soon](https://github.com/stephenandrews/fi)
 * [Juvix PoC, possibly no updates in future](https://github.com/cwgoes/juvix)
 
-## Liquidity
+## Liquidity Language
 
 * [Try Liquidity](http://www.liquidity-lang.org/edit/)
 * [Overview](https://github.com/OCamlPro/liquidity/blob/master/docs/liquidity.md)

@@ -1,4 +1,41 @@
-parameter unit;
-return string;
-storage unit;
-code {CDR;PUSH string "Hello World!";PAIR}
+parameter
+  string;
+storage
+  string;
+code
+  {
+    DUP ;
+    DIP
+      {
+        CDR ;
+      }
+      ;
+    CAR ;
+    PUSH
+      string
+      "hello world" ;
+    DUUP @parameter ;
+    COMPARE ;
+    NEQ ;
+    IF
+      {
+        PUSH
+          string
+          "parameter must be 'hello world'" ;
+        FAILWITH ;
+      }
+      {
+        DUP @parameter ;
+        NIL
+          operation
+          ;
+        PAIR ;
+      }
+      ;
+    DIP
+      {
+        DROP ;
+        DROP ;
+      }
+      ;
+  }
