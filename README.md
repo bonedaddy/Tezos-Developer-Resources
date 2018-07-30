@@ -2,7 +2,7 @@
 
 This repository aims to serve as a collection of Tezos development resurces to assist developers in using the Tezos blockchain.
 
-If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7`
+Tezos is partially built on the idea of community driven governance, and incentivization of community driven development. [Stephen Andrews](https://github.com/stephenandrews/) has done a lot of the Tezos community already and his donation address for XTZ is `tz1cLDXASgh48ntYmLqM3cqPEXmUtpJVVPma`
 
 ## Examples
 
@@ -72,3 +72,8 @@ Various tools for Tezos, categorized by language
 ### Javascript Implementations
 
 * [ezts](https://github.com/stephenandrews/eztz)
+
+## Other Donation Addresses
+
+* [Postables](https://github.com/postables) `tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7`
+* [DefinitelyNotAGoat](https://github.com/DefinitelyNotAGoat/goTezos) `tz1hyaA2mLUQLqQo3TVk6cQHXDc7xoKcBSbN`
