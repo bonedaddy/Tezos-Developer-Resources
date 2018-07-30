@@ -1,6 +1,6 @@
-# Michelson
+# Tezos-Developer-Resources
 
-Exploring Michelson, the programming language for Tezos. This repository will serve as a collection of my notes, various tutorials and resources to help myself, and other developers exploring Michelson.
+This repository aims to serve as a collection of Tezos development resurces to assist developers in using the Tezos blockchain.
 
 If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7`
 
