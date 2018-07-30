@@ -55,6 +55,22 @@ Tezos is partially built on the idea of community driven governance, and incenti
 
 * [Luckytz, the first public Tezos dapp](https://luckytez.github.io/)
 
+### King Of The Tezos
+
+Use this for testing in the online liquidity compiler
+
+```javascript
+{
+  creator =  tz1LRhs3uaaFAXfHJiC5fdEjbmF3MFxdGgUw;
+  king = tz1Yju7jmmsaUiG9qQLoYv35v5pHgnWoLWbt;
+  king_address = KT1GE2AZhazRxGsAjRVkQccHcB2pvANXQWd7;
+  throne = 0tz;
+  greetings_tribute = 0tz;
+  passings_tribute = 0tz;
+  players = (Map [(tz1Yju7jmmsaUiG9qQLoYv35v5pHgnWoLWbt, 0tz)])
+}
+```
+
 ### Tools
 
 Various tools for Tezos, categorized by language
