@@ -4,6 +4,11 @@ This repository aims to serve as a collection of Tezos development resurces to a
 
 If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7`
 
+## Examples
+
+* `string_set.ml` is a basic liquidity contract, allowing one to set a string value in storage
+* `hello_worldz.tz` - Not currently working
+
 ## Tutorials
 
 * [contract a day](https://www.michelson-lang.com/contract-a-day.html#sec-1)
