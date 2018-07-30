@@ -1,0 +1,4 @@
+parameter unit;
+return string;
+storage unit;
+code {CDR;PUSH string "Hello World!";PAIR}
