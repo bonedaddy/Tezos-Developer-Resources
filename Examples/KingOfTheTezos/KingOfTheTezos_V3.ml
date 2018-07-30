@@ -20,7 +20,7 @@ let%init storage (owner_key : key_hash) (tribute_amount : tez)  = {
   king = owner_key;
   king_address = Current.source();
   throne = Current.amount();
-  players = Map.add owner_key tribute_amount (Map [tz1LRhs3uaaFAXfHJiC5fdEjbmF3MFxdGgUw, 0tz]);
+  players = Map.add owner_key (Current.amount()) (Map [tz1LRhs3uaaFAXfHJiC5fdEjbmF3MFxdGgUw, 0tz]);
 }
 
 (* This is where all user interaction occurs *)
@@ -44,7 +44,7 @@ let%entry main
     let throne_minus_tribute = throne_bid - storage.tribute in
     let tribute = throne_bid - throne_minus_tribute in
     (* make sure they have a big enough throne, otherwise fail *)
-    if throne_minus_tribute <= storage.throne then
+    if throne_minus_tribute < storage.throne then
       Current.failwith "throne too small after paying tribute"
     else
       (* Update players with the new king*)
