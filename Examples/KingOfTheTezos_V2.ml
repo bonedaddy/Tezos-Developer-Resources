@@ -58,5 +58,6 @@ let%entry main
       let owner = Account.default storage.owner in
       (* Send tribute to owner *)
       let oldKingTyped = Account.default oldKing in
-      let op = Contract.call owner tribute () in
-      ( [op], storage)
+      let op1 = Contract.call owner tribute () in
+      let op2 = Contract.call oldKingTyped oldThrone () in
+      ( [op1; op2], storage)
