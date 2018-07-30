@@ -19,7 +19,7 @@ If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVj
 ## Variations
 
 * [Liquidity - High Level Language, Ocaml Syntax, Strict compilation with Michelson security restrictions](https://www.liquidity-lang.org/)
-
+* [fi is a powerful, smart contract language for Tezos that compiles down to valid and verifiable Michelson code. fi is currently in early alpha stages, with the aim of release a complete alpha release soon](https://github.com/stephenandrews/fi)
 ### Tools
 
 ### Golang
