@@ -41,7 +41,7 @@ let%init storage
   king_address = Current.source();
   initial_throne = Current.amount();
   throne = Current.amount();
-  players = Map.add creator_key (Current.amount()) (Map [tz1LRhs3uaaFAXfHJiC5fdEjbmF3MFxdGgUw, 0tz]);
+  players = Map.add creator_key (Current.amount()) (Map [tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7, 0tz]);
 }
 
 (* This is where all user interaction occurs *)

@@ -93,6 +93,23 @@ Parameter `tz1UtyxbBMeNQmqXErRCUxi1CuppZ1nybBpF`
 }
 ```
 
+#### Test 3 - Mock a deployment
+
+parameter `tz1Yju7jmmsaUiG9qQLoYv35v5pHgnWoLWbt`
+
+```javascript
+{
+  creator =  tz1LRhs3uaaFAXfHJiC5fdEjbmF3MFxdGgUw;
+  king = tz1Yju7jmmsaUiG9qQLoYv35v5pHgnWoLWbt;
+  king_address = KT1BEqzn5Wx8uJrZNvuS9DVHmLvG9td3fDLi;
+  initial_throne = 10001.2tz;
+  throne = 0tz;
+  greetings_tribute = 0.1tz;
+  passings_tribute = 1tz;
+  players = (Map [(tz1Yju7jmmsaUiG9qQLoYv35v5pHgnWoLWbt, 0tz)])
+}
+```
+
 ### Tools
 
 Various tools for Tezos, categorized by language
