@@ -64,7 +64,7 @@ let%entry main
     (* Calculate remaining bid after tribute *)
     let throne_bid_minus_tributes = (throne_bid - storage.greetings_tribute) - storage.passings_tribute in
     (* Check if they have enough to usurp after removing all tributes*)
-    if throne_bid_minus_tributes < storage.throne then
+    if throne_bid_minus_tributes <= storage.throne then
       Current.failwith "pitiful attempt to overthrow the throne. pay more"
     else
       (*calculate war chest**)
