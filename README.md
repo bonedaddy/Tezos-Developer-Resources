@@ -7,6 +7,7 @@ If you wish to donate or tip Tezos, you can send to `tz1Wpefz7KdEkVf2hXGMRKYymVj
 ## Examples
 
 * `string_set.ml` is a basic liquidity contract, allowing one to set a string value in storage
+* `string_set_with_cost.ml` allows you to set a string in storage if you pay 10tz
 * `hello_worldz.tz` - Not currently working
 
 ## Tutorials
