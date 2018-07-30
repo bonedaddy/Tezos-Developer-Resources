@@ -59,15 +59,17 @@ Tezos is partially built on the idea of community driven governance, and incenti
 
 Use this for testing in the online liquidity compiler
 
+Parameter `tz1UtyxbBMeNQmqXErRCUxi1CuppZ1nybBpF`
+
 ```javascript
 {
   creator =  tz1LRhs3uaaFAXfHJiC5fdEjbmF3MFxdGgUw;
   king = tz1Yju7jmmsaUiG9qQLoYv35v5pHgnWoLWbt;
   king_address = KT1GE2AZhazRxGsAjRVkQccHcB2pvANXQWd7;
-  throne = 0tz;
-  greetings_tribute = 0tz;
-  passings_tribute = 0tz;
-  players = (Map [(tz1Yju7jmmsaUiG9qQLoYv35v5pHgnWoLWbt, 0tz)])
+  throne = 10tz;
+  greetings_tribute = 0.1tz;
+  passings_tribute = 1tz;
+  players = (Map [(tz1Yju7jmmsaUiG9qQLoYv35v5pHgnWoLWbt, 10tz)])
 }
 ```
 
