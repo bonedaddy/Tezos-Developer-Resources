@@ -37,11 +37,9 @@ type storage = {
 }
 
 (* This is used to initialize our storage *)
-let%init storage
-    (greetings_tribute_amount : tez)
-    (passings_tribute_amount  : tez)  = { 
-  greetings_tribute = greetings_tribute_amount;
-  passings_tribute = passings_tribute_amount;
+let%init storage = { 
+  greetings_tribute = 0.01tz;
+  passings_tribute = 0.1tz;
   creator = tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7;
   king = tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7;
   king_address = Current.source();
