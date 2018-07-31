@@ -71,7 +71,7 @@ let%entry main
     (* Get the current throne bid *)
     let throne_bid = Current.amount() in
     (* Calculate remaining bid after tribute *)
-    let throne_bid_minus_tributes = throne_bid - storage.greetings_tribute in
+    let throne_bid_minus_tributes = (throne_bid - storage.greetings_tribute) - storage.passings_tribute in
     (* Check if they have enough to usurp after removing all tributes*)
     if throne_bid_minus_tributes <= storage.throne then
       Current.failwith "pitiful attempt to overthrow the throne. pay more"
@@ -79,7 +79,7 @@ let%entry main
       (*calculate war chest**)
       let war_chest = storage.throne - storage.initial_throne in
       (* update initial throne *)
-      let storage = storage.throne <- throne_bid_minus_tributes in
+      let storage = storage.throne <- throne_bid - storage.greetings_tribute in
       (* update players *)
       let storage = storage.players <- Map.add king throne_bid_minus_tributes storage.players in 
       (* create the creator refund *)
