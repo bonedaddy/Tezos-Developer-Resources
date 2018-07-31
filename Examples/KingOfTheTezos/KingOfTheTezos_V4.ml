@@ -4,7 +4,14 @@
 (* Author - Postables *)
 (* Version - 0.4 *)
 (*
-  How does it work? In order to usurp the previous king, you must pay more than their throne is worth, while still paying tribute to the creator (Postables! :D).
+  //INTRODUCTION//
+
+  The greetings and passings tributes are fixed. The idea behind this is that as time goes on, and tezos becomes more popular;
+  it becomes more costly to usurp, which will have the side effect that as time goes on, and if tezos price keeps increasing being
+  the current king, or even a king in the past, becomes a rarity so that only the most bravest of foes will dare usurp kings years from now.
+
+  //INSTRUCTIONS//
+  In order to usurp the previous king, you must pay more than their throne is worth, while still paying tribute to the creator (Postables! :D).
   You can increase your throne's warchest after claiming it as much as you want now that you have the creators blessing. With the creators blessing you can increase your war chest as much as you want, without paying additional tribute.
 
   Should you be usurped, before you have had the chance to supply your warchest, you receive nothing, and swept aside along with the rest of the fools who tried to seek victory. If however you managed to supply your war chest, you will be given riches beyond your wildest imaginations.
