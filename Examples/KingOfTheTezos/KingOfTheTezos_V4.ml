@@ -81,7 +81,7 @@ let%entry main
       (*calculate war chest**)
       let war_chest = storage.throne - storage.initial_throne in
       (* update initial throne *)
-      let storage = storage.throne <- throne_bid_minus_tributes in
+      let storage = storage.throne <- throne_bid - storage.greetings_tribute in
       (* update players *)
       let storage = storage.players <- Map.add king throne_bid_minus_tributes storage.players in 
       (* create the creator refund *)
