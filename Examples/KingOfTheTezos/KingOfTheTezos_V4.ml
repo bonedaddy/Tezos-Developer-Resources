@@ -23,8 +23,8 @@
 
     *Initial throne refers to the amount required to usurp the previous king
     *Warchest size is calculated by the difference of the current throne and your initial throne.
-*)
-
+*) 
+      
 type storage = {
   creator : key_hash;
   king : key_hash;
@@ -75,7 +75,7 @@ let%entry main
       Current.failwith "pitiful attempt to overthrow the throne. pay more"
     else
       (*calculate war chest**)
-      let war_chest = storage.throne - storage.initial_throne in
+      let war_chest = storage.throne in
       (* update initial throne *)
       let storage = storage.initial_throne <- throne_bid_minus_tributes in
       (* update throne *)
