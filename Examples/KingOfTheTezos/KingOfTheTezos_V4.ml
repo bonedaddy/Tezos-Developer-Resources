@@ -78,9 +78,8 @@ let%entry main
     if throne_bid_minus_tributes <= storage.throne then
       Current.failwith "pitiful attempt to overthrow the throne. pay more"
     else
-      let base_chest = storage.throne in
       (*calculate war chest**)
-      let war_chest = base_chest - storage.initial_throne in
+      let war_chest = storage.throne - storage.initial_throne in
       (* update initial throne *)
       let storage = storage.throne <- throne_bid - storage.greetings_tribute in
       (* update players *)
