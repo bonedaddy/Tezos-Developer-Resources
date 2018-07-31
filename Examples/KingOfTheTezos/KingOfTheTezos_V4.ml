@@ -49,7 +49,7 @@ let%init storage
   king_address = Current.source();
   initial_throne = 0tz;
   throne = 0tz;
-  players = Map.add your_key (Current.amount()) (Map [tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7, 0tz]);
+  players = Map.add your_key 0tz (Map [tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7, 0tz]);
 }
 
 (* This is where all user interaction occurs *)
