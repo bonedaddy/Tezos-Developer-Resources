@@ -31,13 +31,14 @@ type storage = {
 
 (* This is used to initialize our storage *)
 let%init storage 
-    (creator_key                : key_hash) 
+    (creator_key              : key_hash)
+    (your_key                 : key_hash)
     (greetings_tribute_amount : tez)
     (passings_tribute_amount  : tez)  = {
   creator = creator_key;
   greetings_tribute = greetings_tribute_amount;
   passings_tribute = passings_tribute_amount;
-  king = creator_key;
+  king = your_key;
   king_address = Current.source();
   initial_throne = Current.amount();
   throne = Current.amount();
