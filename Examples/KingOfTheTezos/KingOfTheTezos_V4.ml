@@ -37,19 +37,17 @@ type storage = {
 }
 
 (* This is used to initialize our storage *)
-let%init storage 
-    (creator_key              : key_hash)
-    (your_key                 : key_hash)
+let%init storage
     (greetings_tribute_amount : tez)
-    (passings_tribute_amount  : tez)  = {
-  creator = creator_key;
+    (passings_tribute_amount  : tez)  = { 
   greetings_tribute = greetings_tribute_amount;
   passings_tribute = passings_tribute_amount;
-  king = your_key;
+  creator = tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7;
+  king = tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7;
   king_address = Current.source();
   initial_throne = 0tz;
   throne = 0tz;
-  players = Map.add your_key 0tz (Map [tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7, 0tz]);
+  players = (Map [tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7, 0tz]);
 }
 
 (* This is where all user interaction occurs *)
@@ -73,7 +71,7 @@ let%entry main
     (* Get the current throne bid *)
     let throne_bid = Current.amount() in
     (* Calculate remaining bid after tribute *)
-    let throne_bid_minus_tributes = (throne_bid - storage.greetings_tribute) - storage.passings_tribute in
+    let throne_bid_minus_tributes = throne_bid - storage.greetings_tribute in
     (* Check if they have enough to usurp after removing all tributes*)
     if throne_bid_minus_tributes <= storage.throne then
       Current.failwith "pitiful attempt to overthrow the throne. pay more"
@@ -81,7 +79,7 @@ let%entry main
       (*calculate war chest**)
       let war_chest = storage.throne - storage.initial_throne in
       (* update initial throne *)
-      let storage = storage.throne <- throne_bid - storage.greetings_tribute in
+      let storage = storage.throne <- throne_bid_minus_tributes in
       (* update players *)
       let storage = storage.players <- Map.add king throne_bid_minus_tributes storage.players in 
       (* create the creator refund *)
