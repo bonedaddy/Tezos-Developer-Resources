@@ -47,8 +47,8 @@ let%init storage
   passings_tribute = passings_tribute_amount;
   king = your_key;
   king_address = Current.source();
-  initial_throne = Current.amount();
-  throne = Current.amount();
+  initial_throne = 0tz;
+  throne = 0tz;
   players = Map.add your_key (Current.amount()) (Map [tz1Wpefz7KdEkVf2hXGMRKYymVjML9Zpi1r7, 0tz]);
 }
 
@@ -78,8 +78,9 @@ let%entry main
     if throne_bid_minus_tributes <= storage.throne then
       Current.failwith "pitiful attempt to overthrow the throne. pay more"
     else
+      let base_chest = storage.throne in
       (*calculate war chest**)
-      let war_chest = storage.throne - storage.initial_throne in
+      let war_chest = base_chest - storage.initial_throne in
       (* update initial throne *)
       let storage = storage.throne <- throne_bid - storage.greetings_tribute in
       (* update players *)
