@@ -37,6 +37,7 @@ Tezos is partially built on the idea of community driven governance, and incenti
 ### General Tezos Informational Resources
 
 * [Proof Of Stake In Tezos](http://tezos.gitlab.io/master/whitedoc/proof_of_stake.html#proof-of-stake)
+* [Tezos - The Big Picture](http://tezos.gitlab.io/master/whitedoc/the_big_picture.html)
 
 ### Tezos Smart Contract Resources
 
