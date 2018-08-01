@@ -34,6 +34,12 @@ Tezos is partially built on the idea of community driven governance, and incenti
 
 ## Resources
 
+### General Tezos Informational Resources
+
+* [Proof Of Stake In Tezos](http://tezos.gitlab.io/master/whitedoc/proof_of_stake.html#proof-of-stake)
+
+### Tezos Smart Contract Resources
+
 * [The Michelson Language](https://www.michelson-lang.com/)
 * [language specification - Table Of Contents](https://doc.tzalpha.net/whitedoc/michelson.html#table-of-contents)
 * [Ocaml and Michelson Resources](https://github.com/tezoscommunity/FAQ/wiki/OCaml-and-MIchelson-Resources)
