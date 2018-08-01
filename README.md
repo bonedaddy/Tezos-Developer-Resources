@@ -61,7 +61,7 @@ Tezos is partially built on the idea of community driven governance, and incenti
 ## Tezos Dapps
 
 * [Luckytz, the first public Tezos dapp](https://luckytez.github.io/)
-* [TzDrawIt - A Tezos Drawing Dapp](https://www.reddit.com/r/tezos/comments/93euem/tzdrawit_a_decentralized_drawing_app_on_tezos/)
+* [TzDrawIt - A Tezos Drawing Dapp](https://www.reddit.com/r/tezos/comments/93euem/tzdrawit_a_decentralized_drawing_app_on_tezos/) - Original Post was removed - do not use
 * King Of The Tezos (WIP), see `Examples/KingOfTheTezos.ml`
 
 ### Tools
