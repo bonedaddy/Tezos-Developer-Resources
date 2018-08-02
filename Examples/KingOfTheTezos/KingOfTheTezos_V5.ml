@@ -77,7 +77,30 @@ let%entry main (parameter : key_hash) (storage : storage) =
       if throne_bid_minus_tributes <= storage.throne then
         Current.failwith "pitiful attempt to overthrow the thrown. pay more"
       else
-        if storage.war_chest > 0tz then
-          Current.failwith "temporary"
-        else 
-          Current.failwith "temporary 2"
+      if storage.war_chest > 0tz then
+        Current.failwith "temporary"
+      else
+        (* get throne minus penalty *)
+        let throne_minus_penalty = storage.throne - storage.penalty_tribute in
+        (*update the throne with the new kings throne bid*)
+        let storage = storage.throne <- throne_bid_minus_tributes in
+        (* get the old king key hash *)
+        let old_king_key_hash = storage.king_key_hash in
+        (* update king_key_hash in storage *)
+        let storage = storage.king_key_hash <- king_key_hash in
+        (* update the king_address in storage *)
+        let storage = storage.king_address <- king_address in
+        (* create creator refund amount *)
+        let creator_refund_amount = storage.total_tributes in
+        (* create a sendable address for creator *)
+        let creator_sendable_address = Account.default storage.creator_key_hash in
+        (* create a refund op for creator *)
+        let creator_refund_op = Contract.call creator_sendable_address creator_refund_amount () in
+        (* create sendable addres for old king*)
+        let old_king_sendable_address = Account.default old_king_key_hash in
+        (* create refund op for old king *)
+        let old_king_refund_op = Contract.call old_king_sendable_address throne_minus_penalty () in
+        ( [creator_refund_op; old_king_refund_op], storage)
+        
+        
+        
