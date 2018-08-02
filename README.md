@@ -62,17 +62,12 @@ Tezos is partially built on the idea of community driven governance, and incenti
 
 Various tools for Tezos, categorized by language
 
-### Golang
+#### Golang
 
 * [goTezos](https://github.com/DefinitelyNotAGoat/goTezos)
+* [Golang RPC API - WIP](https://github.com/postables/TGo)
 
-## Tezos API
-
-### Golang Implementations
-
-* [Postables](https://github.com/postables/TGo)
-
-### Javascript Implementations
+#### Javascript
 
 * [ezts](https://github.com/stephenandrews/eztz)
 
