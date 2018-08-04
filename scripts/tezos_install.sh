@@ -14,10 +14,13 @@ if [[ DISTRIB_RELEASE == "16.04" ]]; then
     sudo add-apt-repository ppa:ansible/bubblewrap -y
     sudo add-apt-repository ppa:git-core/ppa -y
     sudo apt-get update -y
+    sudo apt install -y libev-dev libgmp-dev pkg-config wget make gcc m4 g++ aspcud curl bzip2 rsync libhidapi-dev
+    # gett the following error on ubuntu 16.04
+    # [ERROR] The compilation of conf-hidapi failed at "/home/rtrade/.opam/opam-init/hooks/sandbox.sh build pkg-config hidapi-libusb".
 fi
 
 sudo apt install -y git m4 build-essential patch unzip bubblewrap wget
-wget https://github.com/ocaml/opam/releases/download/2.0.0-rc4/opam-2.0.0-rc4-x86_64-linux
+wget https://github.com/ocaml/opam/releases/download/2.0.0-rc4/opam-2.-0.0-rc4-x86_64-linux
 sudo cp opam-*linux /usr/local/bin/opam
 sudo chmod a+x /usr/local/bin/opam
 git clone https://gitlab.com/tezos/tezos.git
