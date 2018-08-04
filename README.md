@@ -22,6 +22,7 @@ Various resources centered around getting a better understanding of all aspects 
 ### General Information
 
 * [Tezos - The Big Picture](http://tezos.gitlab.io/master/whitedoc/the_big_picture.html)
+* [Tezos Technical FAQ](https://github.com/tezoscommunity/faq/wiki/Tezos-Technical-FAQ)
 
 ### Proof of Stake
 
