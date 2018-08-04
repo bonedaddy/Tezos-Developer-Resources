@@ -42,23 +42,21 @@ type storage = {
 
 let%init storage 
     (creator_key       : key_hash )
-    (greetings_tribute : tez      )
-    (passings_tribute  : tez      )
+    (greetings_tribute : tez      ) 
+    (passings_tribute  : tez      ) 
     (penalty_tribute   : tez      ) =
   {
-    greetings_tribute = greetings_tribute   ;
-    passings_tribute  = passings_tribute    ;
-    penalty_tribute   = penalty_tribute     ;
-    total_tributes    = (
-      greetings_tribute + passings_tribute
-    ) + penalty_tribute                     ;
-    king_key_hash     = creator_key         ;
-    king_address      = (Current.source())  ;
-    creator_key_hash  = creator_key         ;
-    creator_address   = (Current.source())  ;
-    throne            = 1tz                 ;
-    war_chest         = 0tz                 ;
-    banished          = (Map [KT1GE2AZhazRxGsAjRVkQccHcB2pvANXQWd7, false]);
+    greetings_tribute = greetings_tribute                                         ;
+    passings_tribute  = passings_tribute                                          ;
+    penalty_tribute   = penalty_tribute                                           ;
+    total_tributes    = (greetings_tribute + passings_tribute) + penalty_tribute  ;
+    king_key_hash     = creator_key                                               ;
+    king_address      = (Current.source())                                        ; 
+    creator_key_hash  = creator_key                                               ;
+    creator_address   = (Current.source())                                        ;
+    throne            = 1tz                                                       ;
+    war_chest         = 0tz                                                       ;
+    banished          = (Map [KT1GE2AZhazRxGsAjRVkQccHcB2pvANXQWd7, false])       ;
   }
 
 let%entry main (parameter : key_hash) (storage : storage) =
@@ -78,7 +76,33 @@ let%entry main (parameter : key_hash) (storage : storage) =
         Current.failwith "pitiful attempt to overthrow the thrown. pay more"
       else
       if storage.war_chest > 0tz then
-        Current.failwith "temporary"
+        (* get the war chest *)
+        let old_war_chest = storage.war_chest in
+        (*update the war chest in storage*)
+        let storage = storage.war_chest <- 0tz in
+        (* get old throne size *)
+        let old_throne = storage.throne in
+        (* update the throne size in storaze *)
+        let storage = storage.throne <- throne_bid_minus_tributes in
+        (* get the old king key hash *)
+        let old_king_key_hash = storage.king_key_hash in
+        (* update the king address in storage *)
+        let storage = storage.king_address <- king_address in
+        (* update the king key hash in storage *)
+        let storage = storage.king_key_hash <- king_key_hash in
+        (* calculate old king refund amount *)
+        let old_king_refund_amount = old_war_chest + old_throne in
+        (* calculate creator refund amount *)
+        let creator_refund_amount = storage.passings_tribute + storage.greetings_tribute in
+        (* create sendable address for old king *)
+        let old_king_sendable_address = Account.default old_king_key_hash in
+        (* create sendable address for creator *)
+        let creator_sendable_address = Account.default storage.creator_key_hash in
+        (* create refund op for old king *)
+        let old_king_refund_op = Contract.call old_king_sendable_address old_king_refund_amount () in
+        (* create the refund op for creator *)
+        let creator_refund_op = Contract.call creator_sendable_address creator_refund_amount () in
+        ( [old_king_refund_op; creator_refund_op], storage)
       else
         (* get throne minus penalty *)
         let throne_minus_penalty = storage.throne - storage.penalty_tribute in

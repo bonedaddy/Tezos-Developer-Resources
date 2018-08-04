@@ -4,77 +4,106 @@ This repository aims to serve as a collection of Tezos development resurces to a
 
 Tezos is partially built on the idea of community driven governance, and incentivization of community driven development. [Stephen Andrews](https://github.com/stephenandrews/) has done a lot of the Tezos community already and his donation address for XTZ is `tz1cLDXASgh48ntYmLqM3cqPEXmUtpJVVPma`
 
-## Examples
-
-### Liquidity
-
-### Advancd Liquidity Examples
-
-* `KingOfTheTezos.ml` is a liquidity version of King Of The Ether
-
-### Basic Liquidity Examples
-
-* `hello_world.ml` is a basic hello world in liquidity
-* `string_set.ml` is a basic liquidity contract, allowing one to set a string value in storage
-* `string_set_with_cost.ml` allows you to set a string in storage if you pay 10tz
-* `multi_string_set.ml` allows you to set two strings in storage
-* `multi_string_set_with_cost.ml` allows you to set two strings in storage, and the value of the transaction if you pay 10tz or more
-* `Crowdfund/Basic.sol` - Extremely basic crowdfunding example
-
-### Michelson
-
-* `hello_worldz.tz` - michelson version of the liquidity hello world contract
-
-## Tutorials
-
-* [contract a day](https://www.michelson-lang.com/contract-a-day.html#sec-1)
-* [Getting Started With Tezos: first steps](https://martin.pospech.cz/post/getting_started_with_tezos/)
-* [Optimizing Stack manipulation in Michelson](https://hackernoon.com/optimizing-stack-manipulation-in-michelson-31ba7ff11a3a)
-* [Getting started with Liquidity: coinflip](https://martin.pospech.cz/post/getting_started_with_liquidity/)
-
 ## Resources
 
-### General Tezos Informational Resources
+Various resources centered around getting a better understanding of all aspects of Tezos.
 
-* [Proof Of Stake In Tezos](http://tezos.gitlab.io/master/whitedoc/proof_of_stake.html#proof-of-stake)
+### Social
+
+* [/r/tezos](https://www.reddit.com/r/tezos/)
+* [Tezos matrix chat room](https://riot.im/app/#/room/#tezos:matrix.org)
+
+### Websites
+
+* [tezos.help](https://www.tezos.help/)
+* [tezos.rocks](https://tezos.rocks/)
+* [tezos.com](https://tezos.com/)
+
+### General Information
+
 * [Tezos - The Big Picture](http://tezos.gitlab.io/master/whitedoc/the_big_picture.html)
 
-### Tezos Smart Contract Resources
+### Proof of Stake
 
-* [The Michelson Language](https://www.michelson-lang.com/)
-* [language specification - Table Of Contents](https://doc.tzalpha.net/whitedoc/michelson.html#table-of-contents)
-* [Ocaml and Michelson Resources](https://github.com/tezoscommunity/FAQ/wiki/OCaml-and-MIchelson-Resources)
+* [liquid proof of stake](https://medium.com/tezos/liquid-proof-of-stake-aec2f7ef1da7)
+* [Proof Of Stake In Tezos](http://tezos.gitlab.io/master/whitedoc/proof_of_stake.html#proof-of-stake)
+
+### Baking
+
+* [It's a bakers life for me](https://medium.com/tezos/its-a-baker-s-life-for-me-c214971201e1)
+
+### Delegation
+
+* [TzRate - Ranking based listing of Tezos Bakers and Delegation Services](https://tzrate.com/)
+* [MyTezosBaker - Listing of various delegation services](https://www.mytezosbaker.com/)
+* [Whitedoc - Proof of Stake - Delegation](https://doc.tzalpha.net/whitedoc/proof_of_stake.html#delegation)
+
+### Development
+
+* [Getting Started With Tezos: first steps](https://martin.pospech.cz/post/getting_started_with_tezos/)
 * [Developer Documentation](https://doc.tzalpha.net/index.html)
-* [Baking Information](https://medium.com/tezos/its-a-baker-s-life-for-me-c214971201e1)
-* [Fi Documentation](https://fi-code.gitbooks.io/documentation/content/)
 
 ## Smart Contract Languages
 
-* [Liquidity - High Level Language, Ocaml Syntax, Strict compilation with Michelson security restrictions](https://www.liquidity-lang.org/)
-* [fi is a powerful, smart contract language for Tezos that compiles down to valid and verifiable Michelson code. fi is currently in early alpha stages, with the aim of release a complete alpha release soon](https://github.com/stephenandrews/fi)
+* [The Michelson Language](https://www.michelson-lang.com/)
+* [Liquidity](https://www.liquidity-lang.org/)
+* [fi](https://github.com/stephenandrews/fi)
 * [Juvix PoC, possibly no updates in future](https://github.com/cwgoes/juvix)
 
-## Liquidity Language
+### Michelson
 
-* [Try Liquidity](http://www.liquidity-lang.org/edit/)
-* [Overview](https://github.com/OCamlPro/liquidity/blob/master/docs/liquidity.md)
+* [language specification - Table Of Contents](https://doc.tzalpha.net/whitedoc/michelson.html#table-of-contents)
+
+#### Michelson Tutorials
+
+* [contract a day](https://www.michelson-lang.com/contract-a-day.html#sec-1)
+* [Optimizing Stack manipulation in Michelson](https://hackernoon.com/optimizing-stack-manipulation-in-michelson-31ba7ff11a3a)
+
+### Liquidity
+
+* [Documentation](https://github.com/OCamlPro/liquidity/blob/master/docs/liquidity.md)
+* [Try Liquidity - Online Compiler and Development Environment](http://www.liquidity-lang.org/edit/)
+
+#### Liquidity Tutorials
+
+* [Getting started with Liquidity: coinflip](https://martin.pospech.cz/post/getting_started_with_liquidity/)
+
+#### Examples
+
+Examples cover basic hello world, crowd funding, and a mini dapp called King Of The Tezos
+
+##### Advanced Liquidity Examples
+
+* `Examples/KingOfTheTezos/KingOfTheTezos_V4.ml` - Tezos version of King Of The Ether.
+
+##### Basic Liquidity Examples
+
+* `Examples/hello_world.ml` is a basic hello world in liquidity
+* `Examples/string_set.ml` is a basic liquidity contract, allowing one to set a string value in storage
+* `Examples/string_set_with_cost.ml` allows you to set a string in storage if you pay 10tz
+* `Examples/multi_string_set.ml` allows you to set two strings in storage
+* `Examples/multi_string_set_with_cost.ml` allows you to set two strings in storage, and the value of the transaction if you pay 10tz or more
+* `Examples/Crowdfund/Basic.sol` - Extremely basic crowdfunding example
 
 ## Tezos Dapps
 
 * [Luckytz, the first public Tezos dapp](https://luckytez.github.io/)
 * [TzDrawIt - A Tezos Drawing Dapp](https://www.reddit.com/r/tezos/comments/93euem/tzdrawit_a_decentralized_drawing_app_on_tezos/) - Original Post was removed - do not use
-* King Of The Tezos (WIP), see `Examples/KingOfTheTezos.ml`
 
-### Tools
+## Tools
 
-Various tools for Tezos, categorized by language
+### Block Explorers
 
-#### Golang
+* [ostez - possibly broken](http://ostez.com/)
+* [tzscan.io](https://tzscan.io/)
+* [tezos.id](https://tezos.id/)
+
+### Golang
 
 * [goTezos](https://github.com/DefinitelyNotAGoat/goTezos)
 * [Golang RPC API - WIP](https://github.com/postables/TGo)
 
-#### Javascript
+### Javascript
 
 * [ezts](https://github.com/stephenandrews/eztz)
 
