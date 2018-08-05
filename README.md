@@ -4,6 +4,9 @@ This repository aims to serve as a collection of Tezos development resurces to a
 
 Tezos is partially built on the idea of community driven governance, and incentivization of community driven development. [Stephen Andrews](https://github.com/stephenandrews/) has done a lot of the Tezos community already and his donation address for XTZ is `tz1cLDXASgh48ntYmLqM3cqPEXmUtpJVVPma`
 
+
+If you are looking for a non techincal activate your Fundraisers wallet go Stephen Andrews has a tool [activatez](https://stephenandrews.github.io/activatez/). Always DYOR (Do-Your-Own-Research) before using third party tools.
+
 ## Resources
 
 Various resources centered around getting a better understanding of all aspects of Tezos.
