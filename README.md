@@ -4,8 +4,15 @@ This repository aims to serve as a collection of Tezos development resurces to a
 
 Tezos is partially built on the idea of community driven governance, and incentivization of community driven development. [Stephen Andrews](https://github.com/stephenandrews/) has done a lot of the Tezos community already and his donation address for XTZ is `tz1cLDXASgh48ntYmLqM3cqPEXmUtpJVVPma`
 
-
 If you are looking for a non techincal activate your Fundraisers wallet go Stephen Andrews has a tool [activatez](https://stephenandrews.github.io/activatez/). Always DYOR (Do-Your-Own-Research) before using third party tools.
+
+## Scripts
+
+* `tezos_install.sh` - Installs a Tezos node
+  * Tested on Ubuntu 16.04 + 18.04 although it should work with most debian distros
+* `tezos_manager.sh` - Wrapper for commonly used tezos node functions
+  * Tested on Ubuntu 16.04
+  * Allows you to start a node, start a baker service, and other general node commands
 
 ## Resources
 
