@@ -42,6 +42,7 @@ Various resources centered around getting a better understanding of all aspects 
 ### Baking
 
 * [It's a bakers life for me](https://medium.com/tezos/its-a-baker-s-life-for-me-c214971201e1)
+* [Baking Cycle Stats](https://docs.google.com/spreadsheets/d/1TkU71UPfA8g-zgy1y-wKAA3uOJCZr2LeJpjx05KUCXU/edit#gid=1225565045)
 
 ### Delegation
 
@@ -86,6 +87,7 @@ Examples cover basic hello world, crowd funding, and a mini dapp called King Of 
 ##### Advanced Liquidity Examples
 
 * `Examples/KingOfTheTezos/KingOfTheTezos_V4.ml` - Tezos version of King Of The Ether.
+* [identity](https://gist.github.com/et4te/4dea46b77c001423d6b9a6e275ab67f6)
 
 ##### Basic Liquidity Examples
 
