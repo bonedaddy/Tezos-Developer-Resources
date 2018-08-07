@@ -43,6 +43,7 @@ Various resources centered around getting a better understanding of all aspects 
 
 * [It's a bakers life for me](https://medium.com/tezos/its-a-baker-s-life-for-me-c214971201e1)
 * [Baking Cycle Stats](https://docs.google.com/spreadsheets/d/1TkU71UPfA8g-zgy1y-wKAA3uOJCZr2LeJpjx05KUCXU/edit#gid=1225565045)
+* [Baking Rights Calculator](https://bakendorse.com)
 
 ### Delegation
 
