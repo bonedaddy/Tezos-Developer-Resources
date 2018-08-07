@@ -8,9 +8,17 @@
 #  -> Ubuntu 16.04
 #  -> Pop!_OS 18.04
 
+# install bc if not detected
+if [[ "$(which bc)" == "" ]]; then
+    sudo apt install bc -y
+fi
+
 ## Check for ubuntu 16.04 an dinstall bubble wrap
 DISTRIB_RELEASE=$(grep "DISTRIB_RELEASE" /etc/lsb-release | awk -F '=' '{print $2}')
 TEZOS_NETWORK="betanet"
+CPU_COUNT=$(echo $(grep -c '^processor' /proc/cpuinfo) / 2 | bc)
+
+echo "[INFO] using $CPU_COUNT jobs when running make"
 
 if [[ "$DISTRIB_RELEASE" == "16.04" ]]; then
     echo "[INFO] ubuntu 16.04 detected"
@@ -35,10 +43,10 @@ echo "[INFO] checking out branch $TEZOS_NETWORK"
 git checkout "$TEZOS_NETWORK"
 opam init --bare
 echo "[INFO] building dependencies"
-make build-deps
+make build-deps -j "$CPU_COUNT"
 eval $(opam env)
 echo "[INFO] building tezos"
-make
+make -j "$CPU_COUNT"
 export PATH=~/tezos:$PATH
 source ./src/bin_client/bash-completion.sh
 export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y
