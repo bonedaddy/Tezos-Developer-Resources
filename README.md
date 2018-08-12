@@ -52,7 +52,8 @@ Various resources centered around getting a better understanding of all aspects 
 * [Whitedoc - Proof of Stake - Delegation](https://doc.tzalpha.net/whitedoc/proof_of_stake.html#delegation)
 
 ### Development
-
+ 
+* [Smart Contract Tutorials](https://martin.pospech.cz/post/)
 * [Getting Started With Tezos: first steps](https://martin.pospech.cz/post/getting_started_with_tezos/)
 * [Developer Documentation](https://doc.tzalpha.net/index.html)
 
@@ -80,6 +81,7 @@ Various resources centered around getting a better understanding of all aspects 
 #### Liquidity Tutorials
 
 * [Getting started with Liquidity: coinflip](https://martin.pospech.cz/post/getting_started_with_liquidity/)
+* [Getting started with Liquidity: authentication](https://martin.pospech.cz/post/getting_started_with_liquidity_2/)
 
 #### Examples
 
