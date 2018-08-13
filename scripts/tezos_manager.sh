@@ -71,6 +71,24 @@ originate_account_and_delegate() {
     tezos-client originate account "$ORIGINATED_ACCOUNT_NAME" for "$ACCOUNT_NAME" transferring "$BALANCE" from "$ACCOUNT_NAME" --delegate "$TEZOS_NODE_KEY_NAME" --delegatable
 }
 
+transfer_tokens() {
+    echo "enter account to transfer from"
+    read -r SOURCE_ACCOUNT
+    echo "enter account to transfer to"
+    read -r DESTINATION_ACCOUNT
+    echo "enter amount to send"
+    read -r AMOUNT
+    echo "enter fee"
+    read -r FEE
+    tezos-client transfer "$AMOUNT" from "$SOURCE_ACCOUNT" to "$DESTINATION_ACCOUNT" --fee "$FEE"
+}
+
+get_balance() {
+    echo "enter account to get balance for"
+    read -r ACCOUNT
+    tezos-client get balance for "$ACCOUNT"
+}
+
 case "$1" in
 
     list-protocols)
@@ -121,10 +139,22 @@ case "$1" in
     ra)
         run_accuser
         ;;
+    transfer-tokens)
+        transfer_tokens
+        ;;
+    tt)
+        transfer_tokens
+        ;;
+    get-balance)
+        get_balance
+        ;;
+    gb)
+        get_balance
+        ;;
     *)
         echo "Invalid invocation, $1 is not a valid command"
         echo ""
-        echo "./tezos_manager.sh [list-protocols | run-node | bootstrapped | baker-start | activate-account | originate-account | run-endorser | run-accuser]"
+        echo "./tezos_manager.sh [list-protocols | run-node | bootstrapped | baker-start | activate-account | originate-account | run-endorser | run-accuser | transfer-tokens | get-balance]"
         echo ""
         echo "list-protocols, lp - list understood protocols"
         echo "run-node, rn - used to launch a tezos node"
@@ -134,6 +164,8 @@ case "$1" in
         echo "originate-account, oa - used to originate a new account"
         echo "run-endorser, re - run an endorser"
         echo "run-accuser, ra - run an accuser"
+        echo "transfer-tokens, tt - transfer tokens"
+        echo "get-balanace, gb - get balance"
         exit 1
 
 esac
