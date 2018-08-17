@@ -18,6 +18,10 @@ If you are looking for a non techincal activate your Fundraisers wallet go Steph
 
 Various resources centered around getting a better understanding of all aspects of Tezos.
 
+## Tezos Keys
+
+* [decrypt encrypted private keys](https://gitlab.com/tezos/tezos/issues/254)
+
 ### Social
 
 * [/r/tezos](https://www.reddit.com/r/tezos/)
