@@ -52,7 +52,9 @@ Various resources centered around getting a better understanding of all aspects 
 
 ### Delegation
 
-* [TzRate - Ranking based listing of Tezos Bakers and Delegation Services](https://tzrate.com/)
+* [stakefish - Ranking based listing of Tezos Bakers and Delegation Services](https://tezos.fish/leaderboard)
+* [stakefish - Baking rewards calculator](https://stake.fish/calculator)
+* [stakefish - Bakers Available Capacity calculator](https://tezos.fish/planner)
 * [MyTezosBaker - Listing of various delegation services](https://www.mytezosbaker.com/)
 * [Whitedoc - Proof of Stake - Delegation](https://doc.tzalpha.net/whitedoc/proof_of_stake.html#delegation)
 
