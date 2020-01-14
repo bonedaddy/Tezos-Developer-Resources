@@ -49,10 +49,12 @@ Various resources centered around getting a better understanding of all aspects 
 * [Baking Cycle Stats](https://docs.google.com/spreadsheets/d/1TkU71UPfA8g-zgy1y-wKAA3uOJCZr2LeJpjx05KUCXU/edit#gid=1225565045)
 * [Baking Rights Calculator](https://bakendorse.com)
 * [Baker Heatlh Charts](https://www.tezbaker.io/health/)
+* [stakefish - Baking rewards calculator](https://stake.fish/calculator)
+* [stakefish - Bakers Available Capacity calculator](https://tezos.fish/planner)
 
 ### Delegation
 
-* [TzRate - Ranking based listing of Tezos Bakers and Delegation Services](https://tzrate.com/)
+* [stakefish - Ranking based listing of Tezos Bakers and Delegation Services](https://tezos.fish/leaderboard)
 * [MyTezosBaker - Listing of various delegation services](https://www.mytezosbaker.com/)
 * [Whitedoc - Proof of Stake - Delegation](https://doc.tzalpha.net/whitedoc/proof_of_stake.html#delegation)
 
